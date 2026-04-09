@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="flex">
+                <div class="w-full relative md:block hidden">
+                    <img src="/assets/signup.png" class="w-full h-screen object-cover" alt="">
+                    <div class="absolute z-2 bottom-18 left-12 px-10">
+                        <div class="text-[#CD7A27] text-[12px] font-semibold px-4 py-2 bg-[#CD7A27]/20 rounded-full w-fit">
+                        <p>Secure Access Gateway</p>
+                    </div>
+                    <h3 class="text-white font-bold text-[72px]">ACCESS THE <span class="text-[#CD7A27]">NEXT ERA</span></h3>
+                    <p class="text-gray-500 text-[16px] max-w-sm">Join the elite marketplace for high-end digital
+assets. Secure your position in the vault.</p>
+                    </div>
+                </div>
+                <div class="w-full min-h-screen bg-[#1C1B1C] md:px-20 md:py-20 px-8 py-8" >
+                        <form action="/pages/login/index.html" method="POST" class=" w-full h-full flex-1 flex flex-col justify-center">
+                    <div class="py-8">
+                        <h4 class="md:text-[42px] text-[32px] text-white font-semibold">CREATE ACCOUNT</h4>
+                        <p class="text-gray-500 text-[16px]">Enter your credentials to gain access.</p>
+                    </div>
+                    <div class="mb-5 w-full">
+                        <label for="name" class="block text-gray-500 text-[12px] font-medium mb-2">FULL NAME</label>
+                        <div class="flex gap-2 bg-[#0E0E0F] items-center justify-center px-4 focus:ring-1 py-3 focus:ring-gray-500 focus:outline-none rounded-md">
+                            <img src="/assets/ic-person.svg" class="w-[18px] h-[18px]" alt="">
+                            <input type="text" id="name" placeholder="Enter your name" name="name" class="w-full text-gray-500 placeholder:text-gray-500 outline-none ">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-5 w-full">
+                        <label for="email" class="block text-gray-500 text-[12px] font-medium mb-2">EMAIL ADDRESS</label>
+                        <div class="flex gap-2 bg-[#0E0E0F] items-center justify-center px-4 focus:ring-1 py-3 focus:ring-gray-500 focus:outline-none rounded-md">
+                            <img src="/assets/ic-email.svg" class="w-[18px] h-[18px]" alt="">
+                            <input type="email" id="email" placeholder="example@gmail.com" name="email" class="w-full text-gray-500 placeholder:text-gray-500 outline-none ">
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="mb-5 w-full">
+                        <label for="password" class="block text-gray-500 text-[12px] font-medium mb-2">PASSWORD</label>
+                        <div class="flex gap-2 bg-[#0E0E0F] items-center justify-center px-4 focus:ring-1 py-3 focus:ring-gray-500 focus:outline-none rounded-md">
+                            <img src="/assets/ic-password.svg" class="w-[18px] h-[18px]" alt="">
+                            <input type="password" id="password" placeholder="Enter your password" name="password" class="w-full text-gray-500 placeholder:text-gray-500 outline-none ">
+                        </div>
+                        </div>
+                        <div class="mb-5 w-full">
+                        <label for="confirm-password" class="block text-gray-500 text-[12px] font-medium mb-2">CONFIRM PASSWORD</label>
+                        <div class="flex gap-2 bg-[#0E0E0F] items-center justify-center px-4 focus:ring-1 py-3 focus:ring-gray-500 focus:outline-none rounded-md">
+                            <img src="/assets/ic-confirmpassword.svg" class="w-[18px] h-[18px]" alt="">
+                            <input type="password" id="confirm-password" placeholder="Confirm your password" name="confirm-password" class="w-full text-gray-500 placeholder:text-gray-500 outline-none ">
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="cursor-pointer bg-[#CD7A27] hover:bg-[#A05913] font-semibold w-full text-white px-[24px] py-[10px] rounded-md text-[16px] mt-3">
+                        CREATE ACCOUNT
+                    </button>
+                    
+                    <div class="text-center w-full mt-10">
+                    <p class="text-gray-500 text-[14px]">Already Have an Account? <span class="text-white font-semibold"> <a href="/pages/login/index.html">Login</a></span></p>
+                </div>
+                </form>
+                
+                    
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirm-password").value;
+
+    // Hardcoded data
+    const validName = "admin next era";
+    const validEmail = "admin@nextera.com";
+    const validPassword = "123456";
+
+    if(
+        name === validName &&
+        email === validEmail &&
+        password === validPassword &&
+        confirmPassword === validPassword
+    ){
+        alert("Account berhasil dibuat!");
+        window.location.href = "/pages/login/index.html";
+    } 
+    else{
+        alert("Data harus sesuai dengan akun admin yang telah ditentukan!");
+    }
+});
+</script>
+</html>

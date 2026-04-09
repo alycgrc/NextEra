@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment — NextEra</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+        <nav class="fixed z-100 bg-[#1C1B1C]/90 bg-blur-xl w-full">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+              <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                  <button type="button" id="menu-btn" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+                      <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+                      <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                  <div class="flex shrink-0 items-center">
+                    <a href="/pages/home/index.html">
+                      <h2 class="text-[24px] text-white font-semibold">NextEra</h2>
+                    </a>
+                  </div>
+                  <div class="hidden sm:ml-6 sm:block w-full">
+                    <div class="flex space-x-4 mx-auto items-center justify-center"> 
+                      <a href="/pages/product/index.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27]">Product</a>
+                      <a href="/pages/about/index.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27]">About Us</a>
+                      <a href="/pages/contact/index.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27]">Contact</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                  <a href="/pages/cart/index.html">
+                    <button type="button" class="relative cursor-pointer rounded-full p-1 text-gray-400 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
+                    <span class="absolute -inset-1.5"></span>
+                    <span class="sr-only">View carts</span>
+                    <img src="/assets/ic-cartnav.svg" class="size-4" alt="Cart">
+                  </button>
+                  </a>
+                  <el-dropdown class="relative ml-3 ">
+                    <button class="relative flex cursor-pointer rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                      <span class="absolute -inset-1.5"></span>
+                      <span class="sr-only">Open user menu</span>
+                      <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-6 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10" />
+                    </button>
+                  </el-dropdown>
+                </div>
+              </div>
+            </div>
+          
+            <div id="mobile-menu" class="hidden sm:hidden">
+              <div class="space-y-1 px-2 pt-2 pb-3">
+                <a href="/pages/product/index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27] font-medium ">Product</a>
+                <a href="/pages/about/index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27] font-medium text-gray-300 hover:bg-white/5 ">About Us</a>
+                <a href="/pages/contact/index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27] font-medium text-gray-300 hover:bg-white/5 ">Contact</a>
+              </div>
+            </div>
+          </nav>
+        <section>
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-8 lg:gap-10 items-start px-4 md:px-0 py-[100px]">
+                <div class="space-y-5">
+                    <div class="pt-1">
+                        <p class="text-[10px] text-[#E38D39] uppercase font-semibold">Payment</p>
+                        <p class="mt-1 text-sm text-white">Payment Details</p>
+                        <span class="mt-2 block w-10 h-[2px] bg-red-500/80 rounded-full"></span>
+                    </div>
+
+                    <header>
+                        <h1 class="text-3xl sm:text-4xl font-semibold text-white">Payment Method</h1>
+                        <p class="mt-2 text-sm text-gray-500 max-w-xl">Select your preferred gateway to unlock immediate access to your premium nextera items.</p>
+                    </header>
+
+                    <div class="space-y-3" role="radiogroup" aria-label="Payment method">
+                        <div>
+                            <input id="pay-qris" class="peer sr-only" type="radio" name="payment-method" value="qris" checked>
+                            <label for="pay-qris" class="method-option flex cursor-pointer items-center justify-between rounded-xl border border-transparent bg-[#1C1B1C] px-4 py-4 transition-all duration-300 peer-checked:border-[#E6C9A4] peer-checked:bg-[#2a2929] peer-checked:shadow-[0_0_0_1px_rgba(230,201,164,0.25)] hover:border-white/15">
+                                <div class="grid items-center gap-3">
+                                    <span class="flex size-10 items-center justify-center rounded-md bg-white/5 text-gray-400">
+                                        <img src="/assets/ic-qris.svg" alt="QRIS">
+                                    </span>
+                                    <div>
+                                        <p class="font-semibold text-white">QRIS</p>
+                                        <p class="text-xs text-gray-500">Instant Payment</p>
+                                    </div>
+                                </div>
+                                <span class="size-3 rounded-full border border-[#E6C9A4] bg-transparent peer-checked:bg-[#E6C9A4]"></span>
+                            </label>
+                        </div>
+
+                        <div>
+                            <input id="pay-bank" class="peer sr-only" type="radio" name="payment-method" value="bank">
+                            <label for="pay-bank" class="method-option flex cursor-pointer items-center justify-between rounded-xl border border-transparent bg-[#1C1B1C] px-4 py-4 transition-all duration-300 peer-checked:border-[#E6C9A4] peer-checked:bg-[#2a2929] peer-checked:shadow-[0_0_0_1px_rgba(230,201,164,0.25)] hover:border-white/15">
+                                <div class="grid items-center gap-3">
+                                    <span class="flex size-10 items-center justify-center rounded-md bg-white/5 text-gray-400">
+                                        <img src="/assets/ic-bank.svg" alt="Bank Transfer">
+                                    </span>
+                                    <div>
+                                        <p class="font-semibold text-white">Bank Transfer</p>
+                                        <p class="text-xs text-gray-500">Manual Verification</p>
+                                    </div>
+                                </div>
+                                <span class="size-3 rounded-full border border-[#E6C9A4] bg-transparent peer-checked:bg-[#E6C9A4]"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="panel-qris" class="method-panel overflow-hidden rounded-xl border border-white/5 bg-[#131417] p-6 opacity-100 translate-y-0 transition-all duration-350">
+                        <h3 class="text-xl font-semibold text-center text-white">Payment Instructions</h3>
+                        <p class="mt-2 text-center text-sm text-gray-500">Scan the QR code below using your preferred banking or e-wallet app to complete the transaction.</p>
+                        <div class="mt-5 flex justify-center">
+                            <div class="rounded-lg bg-white p-3">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=NextEra-Payment-QRIS-882194021" alt="QRIS code" class="size-36 sm:size-40">
+                            </div>
+                        </div>
+                        <div class="mt-4 flex justify-center">
+                            <a
+                                href="https://api.qrserver.com/v1/create-qr-code/?size=1024x1024&data=NextEra-Payment-QRIS-882194021"
+                                download="nextera-qris.png"
+                                class="inline-flex items-center gap-2 rounded-lg bg-[#CD7A27] px-4 py-2 text-xs font-semibold text-white hover:bg-[#A05913] transition-colors"
+                            >
+                                <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M7.5 10.5 12 15m0 0 4.5-4.5M12 15V3"/>
+                                </svg>
+                                Download QR Picture
+                            </a>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs">
+                            <span class="text-gray-500">Transaction ID</span>
+                            <span class="font-medium text-gray-300">VLT-B82194021</span>
+                        </div>
+                    </div>
+
+                    <div id="panel-bank" class="method-panel overflow-hidden rounded-xl border border-white/5 bg-[#131417] p-6 opacity-0 -translate-y-1 transition-all duration-350 hidden">
+                        <h3 class="text-xl font-semibold text-center text-white">Bank Transfer Details</h3>
+                        <p class="mt-2 text-center text-sm text-gray-500">Transfer the total amount to the account below and upload your receipt for manual verification.</p>
+                        <div class="mt-5 grid grid-cols-2 gap-4 text-xs">
+                            <div>
+                                <p class="text-gray-500 uppercase tracking-wide">Bank Name</p>
+                                <p class="mt-1 font-semibold text-gray-200">BCA BANK</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 uppercase tracking-wide">Account Holder</p>
+                                <p class="mt-1 font-semibold text-gray-200">NEXTERA</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 rounded-lg bg-white/5 border border-white/10 px-4 py-3 flex items-center justify-between">
+                            <span class="tracking-[0.18em] text-sm sm:text-base text-gray-100 tabular-nums">8829 0123 4567 890</span>
+                            <button type="button" class="rounded-md bg-white/10 px-2 py-1 text-[10px] tracking-wide uppercase text-gray-300 hover:bg-white/15">Copy</button>
+                        </div>
+                        <input id="proof-file-input" type="file" accept=".jpg,.jpeg,.png,.pdf" class="sr-only">
+                        <label for="proof-file-input" class="mt-4 w-full rounded-xl border border-dashed border-white/20 bg-transparent px-4 py-8 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-white/5 transition-colors">
+                            <span class="flex size-10 items-center justify-center rounded-full bg-[#2f2620] text-[#E6C9A4] mb-3">
+                                <img src="/assets/ic-upload.svg" alt="">
+                            </span>
+                            <p class="text-xl text-white/90 font-medium">Upload Proof of Payment</p>
+                            <p id="proof-file-name" class="mt-1 text-sm text-gray-500">JPG, PNG or PDF (Max 5MB)</p>
+                        </label>
+                        <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between text-xs">
+                            <span class="text-gray-500">Transaction ID</span>
+                            <span class="font-medium text-gray-300">VLT-B82194021</span>
+                        </div>
+                    </div>
+
+                    <div class="rounded-xl border border-cyan-700/30 bg-cyan-950/30 px-4 py-4 flex items-start gap-3">
+                        <span class="mt-0.5 flex size-5 items-center justify-center rounded-full bg-cyan-200 text-cyan-900 text-xs font-bold">i</span>
+                        <p class="text-xs sm:text-sm text-gray-400">Activation Protocol: Each service in your nextera is provisioned via private API. Successful payment verification issues a unique access token for each provider.</p>
+                    </div>
+                </div>
+
+                <aside class="lg:sticky lg:top-8">
+                    <div class="rounded-xl border border-white/5 bg-[#141519] p-6">
+                        <h2 class="text-xl font-semibold text-white">Order Summary</h2>
+                        <div class="mt-5 space-y-3">
+                            <div class="flex items-center justify-between gap-3 rounded-lg bg-white/3 border border-white/5 p-3">
+                                <div class="flex items-center gap-3 min-w-0">
+                                    <div class="size-8 rounded-md bg-[#1f2024] flex items-center justify-center text-red-400"><img src="/assets/netlfix.png" alt=""></div>
+                                    <div class="min-w-0">
+                                        <p class="text-sm font-medium text-white">Netflix Premium</p>
+                                        <p class="text-[10px] text-gray-500 uppercase ">Monthly Access</p>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-semibold tabular-nums text-white">Rp 99.999</span>
+                            </div>
+                        </div>
+
+                        <dl class="mt-6 space-y-2 text-sm">
+                            <div class="flex items-center justify-between text-gray-400">
+                                <dt>Subtotal</dt>
+                                <dd class="tabular-nums">Rp 199.998</dd>
+                            </div>
+                            <div class="flex justify-between justify-between text-gray-400">
+                                    <dt>Service Fee</dt>
+                                    <dd id="summary-fee" class="tabular-nums text-grey font-medium">Rp 2.999</dd>
+                                </div>
+                                <div class="flex justify-between justify-between text-gray-400">
+                                    <dt>Taxes</dt>
+                                    <dd id="summary-tax" class="tabular-nums text-grey font-medium">Rp 21.999,78</dd>
+                                </div>
+                            <div class="flex items-center justify-between text-gray-400">
+                                <dt>Activation Fee</dt>
+                                <dd class="text-[#CD7A27] font-reguler">FREE</dd>
+                            </div>
+                        </dl>
+
+                        <div class="my-5 h-px bg-white/10"></div>
+                        <div class="flex items-end justify-between">
+                            <span class="text-base font-semibold text-white">Total</span>
+                            <div class="text-right">
+                                <p class="text-3xl font-bold tabular-nums text-white">Rp 224.996,78</p>
+                                <p class="text-[10px] text-gray-500 uppercase tracking-wide">VAT Included</p>
+                            </div>
+                        </div>
+                    <a href="/pages/success/index.html">
+                        <button type="button" class="mt-6 w-full rounded-full bg-[#CD7A27] py-3.5 text-sm font-bold text-white hover:bg-[#A05913] transition-all">
+                            Pay &amp; Activate
+                        </button>
+                    </a>
+                        <p class="mt-4 text-[10px] text-gray-500 text-center leading-relaxed">
+                            By clicking “Pay &amp; Activate”, you agree to NextEra Terms of Service and activation policy.
+                        </p>
+                        <div class="mt-3 flex justify-center gap-3 text-gray-600">
+                            <span><img src="/assets/ic-sumarry-1.svg" alt=""></span><span><img src="/assets/ic-summary-2.svg" alt=""></span><span><img src="/assets/ic-summary-3.svg" alt=""></span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <footer class="container mx-auto py-[50px] border-t-2 border-white/10">
+        <div class="max-w-7xl mx-auto py-[20px] md:px-0 px-4">
+            <div class="grid grid-cols-1 md:flex md:flex-col gap-4">
+              <div  class="grid grid-cols-1 md:flex items-center justify-between text-white text-[24px] font-semibold">
+              <h2>NEXTERA</h2>
+              <div class="grid grid-cols-1 md:flex items-center justify-between md:gap-4 gap-2">
+                <a href="/pages/home/index.html" class="text-white text-[16px] font-normal">Home</a>
+                <a href="/pages/product/index.html" class="text-white text-[16px] font-normal">Product</a>
+                <a href="/pages/about/index.html" class="text-white text-[16px] font-normal">About Us</a>
+                <a href="/pages/contact/index.html" class="text-white text-[16px] font-normal">Contact</a>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:flex items-center justify-between">
+              <p class="text-white text-[14px]">©  2025 NextEra. All rights reserved.</p>
+              <div class="flex items-center gap-2 text-white text-[14px]">
+                <p>Terms & Conditions</p>
+                <span>|</span>
+                <p>Privacy Policy</p>
+              </div>
+            </div>
+            </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+        const btn = document.getElementById("menu-btn");
+        const menu = document.getElementById("mobile-menu");
+
+        btn.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
+        (function () {
+            var radios = document.querySelectorAll('input[name="payment-method"]');
+            var panelQris = document.getElementById('panel-qris');
+            var panelBank = document.getElementById('panel-bank');
+
+            function showPanel(panel) {
+                panel.classList.remove('hidden');
+                requestAnimationFrame(function () {
+                    panel.classList.remove('opacity-0', '-translate-y-1');
+                    panel.classList.add('opacity-100', 'translate-y-0');
+                });
+            }
+
+            function hidePanel(panel) {
+                panel.classList.remove('opacity-100', 'translate-y-0');
+                panel.classList.add('opacity-0', '-translate-y-1');
+                setTimeout(function () {
+                    panel.classList.add('hidden');
+                }, 250);
+            }
+
+            function applyMethod() {
+                var selected = document.querySelector('input[name="payment-method"]:checked');
+                if (!selected) return;
+                if (selected.value === 'qris') {
+                    showPanel(panelQris);
+                    hidePanel(panelBank);
+                } else {
+                    showPanel(panelBank);
+                    hidePanel(panelQris);
+                }
+            }
+
+            radios.forEach(function (radio) {
+                radio.addEventListener('change', applyMethod);
+            });
+            applyMethod();
+
+            var proofInput = document.getElementById('proof-file-input');
+            var proofName = document.getElementById('proof-file-name');
+            if (proofInput && proofName) {
+                proofInput.addEventListener('change', function () {
+                    var file = proofInput.files && proofInput.files[0];
+                    if (!file) {
+                        proofName.textContent = 'JPG, PNG or PDF (Max 5MB)';
+                        proofName.className = 'mt-1 text-sm text-gray-500';
+                        return;
+                    }
+                    if (file.size > 5 * 1024 * 1024) {
+                        proofName.textContent = 'File too large. Please choose max 5MB.';
+                        proofName.className = 'mt-1 text-sm text-red-400';
+                        proofInput.value = '';
+                        return;
+                    }
+                    proofName.textContent = 'Selected: ' + file.name;
+                    proofName.className = 'mt-1 text-sm text-green-400';
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

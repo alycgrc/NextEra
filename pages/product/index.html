@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Apps — NextEra</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+        <nav class="fixed z-100 bg-[#1C1B1C]/90 bg-blur-xl w-full">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+              <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                  <button type="button" id="menu-btn" class="cursor-pointer relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+                      <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+                      <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                  <div class="flex shrink-0 items-center">
+                    <a href="/pages/home/index.html">
+                      <h2 class="text-[24px] text-white font-semibold">NextEra</h2>
+                    </a>
+                  </div>
+                  <div class="hidden sm:ml-6 sm:block w-full">
+                    <div class="flex space-x-4 mx-auto items-center justify-center"> 
+                      <a href="/pages/product/index.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27]">Product</a>
+                      <a href="/pages/about/index.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27]">About Us</a>
+                      <a href="/pages/contact/index.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27]">Contact</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                  <a href="/pages/cart/index.html">
+                    <button type="button" class="relative cursor-pointer rounded-full p-1 text-gray-400 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
+                    <span class="absolute -inset-1.5"></span>
+                    <span class="sr-only">View carts</span>
+                    <img src="/assets/ic-cartnav.svg" class="size-4" alt="Cart">
+                  </button>
+                  </a>
+                  <el-dropdown class="relative ml-3 ">
+                    <button class="relative flex cursor-pointer rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                      <span class="absolute -inset-1.5"></span>
+                      <span class="sr-only">Open user menu</span>
+                      <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-6 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10" />
+                    </button>
+                  </el-dropdown>
+                </div>
+              </div>
+            </div>
+          
+            <div id="mobile-menu" class="hidden sm:hidden">
+              <div class="space-y-1 px-2 pt-2 pb-3">
+                <a href="/pages/product/index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27] font-medium ">Product</a>
+                <a href="/pages/about/index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27] font-medium text-gray-300 hover:bg-white/5 ">About Us</a>
+                <a href="/pages/contact/index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27] font-medium text-gray-300 hover:bg-white/5 ">Contact</a>
+              </div>
+            </div>
+          </nav>
+        <div class="max-w-7xl mx-auto px-4 sm:px-0 lg:px-8 py-[100px]">
+            
+            <header class="mb-10 lg:mb-12">
+                <h1 class="text-3xl sm:text-4xl lg:text-[48px] font-semibold tracking-tight text-white">Choose Your Apps</h1>
+                <p class="mt-3 text-[15px] sm:text-[16px] text-gray-500 max-w-2xl leading-relaxed">
+                    Access premium global content instantly. Secure your cinematic journey with the best marketplace rates for leading streaming platforms.
+                </p>
+            </header>
+
+            <div class="flex flex-col lg:flex-row gap-2 md:gap-10 lg:items-start">
+                <aside class="w-full lg:w-72 shrink-0 lg:sticky lg:top-8 space-y-6">
+                    <div>
+                        <div class="flex items-center justify-between gap-3 mb-5">
+                            <span class="text-sm font-semibold tracking-wide text-[#CD7A27]">FILTER</span>
+                            <button
+                                type="button"
+                                id="filter-toggle"
+                                class="cursor-pointer inline-flex items-center justify-center rounded-lg p-2 text-[#CD7A27] hover:bg-white/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E38D39]/50"
+                                aria-expanded="true"
+                                aria-controls="filter-panel"
+                            >
+                                <span class="sr-only">Toggle filter sections</span>
+                                <img src="/assets/ic-filter.svg" alt="">
+                            </button>
+                        </div>
+
+                        <div id="filter-panel" class="space-y-8">
+                            <div>
+                                <h3 class="text-xs font-semibold tracking-wide text-[#CD7A27] mb-3">SORT BY</h3>
+                                <div class="space-y-2.5" role="radiogroup" aria-label="Sort by">
+                                    <label class="flex items-center gap-3 cursor-pointer group px-3 py-2 has-[:checked]:bg-[#1C1B1C] rounded-md">
+                                        <input type="radio" name="sort" value="popularity" checked class="size-4 accent-[#E38D39] 
+                                            appearance-none 
+                                            rounded-full 
+                                            border-2 border-gray-500 
+                                            bg-transparent 
+                                            checked:border-[#CD7A27] 
+                                            checked:bg-[radial-gradient(circle,_#CD7A27_40%,_transparent_50%)]
+                                            focus:outline-none 
+                                            transition-all ">
+                                        <span class="text-sm text-gray-200 group-hover:text-white">Popularity</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer group px-3 py-2 has-[:checked]:bg-[#1C1B1C] rounded-md">
+                                        <input type="radio" name="sort" value="price" class="size-4 accent-[#CD7A27]
+                                        appearance-none 
+                                            rounded-full 
+                                            border-2 border-gray-500 
+                                            bg-transparent 
+                                            checked:border-[#CD7A27] 
+                                            checked:bg-[radial-gradient(circle,_#CD7A27_40%,_transparent_50%)]
+                                            focus:outline-none 
+                                            transition-all">
+                                        <span class="text-sm text-gray-200 group-hover:text-white">Price: Low to High</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer group px-3 py-2 has-[:checked]:bg-[#1C1B1C] rounded-md">
+                                        <input type="radio" name="sort" value="duration" class="size-4 accent-[#CD7A27] addEventListener
+                                        appearance-none 
+                                            rounded-full 
+                                            border-2 border-gray-500 
+                                            bg-transparent 
+                                            checked:border-[#CD7A27] 
+                                            checked:bg-[radial-gradient(circle,_#CD7A27_40%,_transparent_50%)]
+                                            focus:outline-none 
+                                            transition-all">
+                                        <span class="text-sm text-gray-200 group-hover:text-white">Duration</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xs font-semibold tracking-wide text-[#CD7A27] mb-3">CATEGORY</h3>
+                                <div class="space-y-2.5" role="radiogroup" aria-label="Category">
+                                    <label class="flex items-center gap-3 cursor-pointer group px-3 py-2 has-[:checked]:bg-[#1C1B1C] rounded-md">
+                                        <input type="radio" name="category" value="all" checked class="size-4 accent-[#CD7A27]
+                                        appearance-none 
+                                            rounded-full 
+                                            border-2 border-gray-500 
+                                            bg-transparent 
+                                            checked:border-[#CD7A27] 
+                                            checked:bg-[radial-gradient(circle,_#CD7A27_40%,_transparent_50%)]
+                                            focus:outline-none 
+                                            transition-all">
+                                        <span class="text-sm text-gray-200 group-hover:text-white">All categories</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer group px-3 py-2 has-[:checked]:bg-[#1C1B1C] rounded-md">
+                                        <input type="radio" name="category" value="video" class="size-4 accent-[#CD7A27] addEventListener
+                                        appearance-none 
+                                            rounded-full 
+                                            border-2 border-gray-500 
+                                            bg-transparent 
+                                            checked:border-[#CD7A27] 
+                                            checked:bg-[radial-gradient(circle,_#CD7A27_40%,_transparent_50%)]
+                                            focus:outline-none 
+                                            transition-all">
+                                        <span class="text-sm text-gray-200 group-hover:text-white">Video Streaming</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer group px-3 py-2 has-[:checked]:bg-[#1C1B1C] rounded-md">
+                                        <input type="radio" name="category" value="music" class="size-4 accent-[#CD7A27] addEventListener
+                                        appearance-none 
+                                            rounded-full 
+                                            border-2 border-gray-500 
+                                            bg-transparent 
+                                            checked:border-[#CD7A27] 
+                                            checked:bg-[radial-gradient(circle,_#CD7A27_40%,_transparent_50%)]
+                                            focus:outline-none 
+                                            transition-all">
+                                        <span class="text-sm text-gray-200 group-hover:text-white">Music &amp; Audio</span>
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer group px-3 py-2 has-[:checked]:bg-[#1C1B1C] rounded-md">
+                                        <input type="radio" name="category" value="creative" class="size-4 accent-[#CD7A27] addEventListener
+                                        appearance-none 
+                                            rounded-full 
+                                            border-2 border-gray-500 
+                                            bg-transparent 
+                                            checked:border-[#CD7A27] 
+                                            checked:bg-[radial-gradient(circle,_#CD7A27_40%,_transparent_50%)]
+                                            focus:outline-none 
+                                            transition-all">
+                                        <span class="text-sm text-gray-200 group-hover:text-white">Creative Tools</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xs font-semibold tracking-wide text-[#CD7A27] mb-3">PLAN TYPE</h3>
+                                <div class="flex flex-wrap gap-2" role="group" aria-label="Plan type">
+                                    <button type="button" class="cursor-pointer plan-pill rounded-full px-4 py-2 text-xs font-medium bg-[#CD7A27] text-white" data-plan="monthly" aria-pressed="true">Monthly</button>
+                                    <button type="button" class="cursor-pointer plan-pill rounded-full px-4 py-2 text-xs font-medium bg-[#1C1B1C] text-gray-300 hover:text-white" data-plan="quarterly" aria-pressed="false">Quarterly</button>
+                                    <button type="button" class="cursor-pointer plan-pill rounded-full px-4 py-2 text-xs font-medium bg-[#1C1B1C] text-gray-300 hover:text-white" data-plan="annual" aria-pressed="false">Annual</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden md:block rounded-xl bg-[linear-gradient(125deg,#CD7A2733_0%,#FFFFFF00_100%)] p-5">
+                        <div>
+                            <span class="text-[#E38D39] shrink-0" aria-hidden="true">
+                                <svg class="size-8" viewBox="0 0 24 24" fill="currentColor"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423L16.5 15.75l.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/></svg>
+                            </span>
+                            <div>
+                                <h3 class="font-semibold text-white">Bundle &amp; Save</h3>
+                                <p class="mt-1 text-sm text-[#E7BDB7] leading-relaxed">Combine 3+ services to unlock an additional 15% discount.</p>
+                                <button type="button" class="cursor-pointer mt-4 w-full rounded-lg bg-[#2A2A2A] px-4 py-2.5 text-sm font-medium text-gray-200 hover:bg-[#333] transition-colors">Explore Bundles</button>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="flex-1 min-w-0 space-y-8">
+                    <div class="relative">
+                        <span class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-gray-500">
+                            <svg class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+                        </span>
+                        <input id="product-search" type="search" name="q" placeholder="Choose Your Apps Now…." class="w-full rounded-xl bg-[#1C1B1C] py-3.5 pl-12 pr-4 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:ring-1 focus:ring-[#E38D39]/40" autocomplete="off">
+                    </div>
+
+                    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                        <p id="product-empty" class="hidden col-span-full text-center py-12 text-gray-500">No services match your filters.</p>
+                        
+                        <article
+                            class="product-card flex flex-col rounded-xl overflow-hidden bg-[#39393A]/30"
+                            data-product-card
+                            data-name="Netflix"
+                            data-price="25000"
+                            data-category="video"
+                            data-duration="30"
+                            data-popularity="98"
+                            data-plans="monthly quarterly annual"
+                        >
+                        <a href="/pages/detail-product/index.html">
+                            <div class="aspect-[16/10] bg-[#1f1f1f] overflow-hidden">
+                                <img src="/assets/product-netlix.png" alt="" class="h-full w-full object-cover">
+                            </div>
+                            <div class="p-4 flex flex-col flex-1 gap-3">
+                                <div class="flex flex-col flex-1">
+                                    <div class="flex items-center justify-between gap-2">
+                                    <h2 class="font-semibold text-white text-[20px]">Netflix Premium</h2>
+                                    <span class="text-[#E38D39] font-semibold whitespace-nowrap">Rp99.99k</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex gap-2 items-center justify-start">
+                                    <img src="/assets/ic-time.svg" class="w-[14px] h-[16px]" alt="">
+                                    <p class="text-xs text-[#FDE1C5]">30 Days Access</p>
+                                </div>
+                                <p><span class="text-xs text-[#FDE1C5] uppercase tracking-wide">Per month</span></p>
+                                </div>
+                                </div>
+                                <div class="mt-4 flex flex-col gap-2 mt-auto">
+                                    <a href="/pages/payment/index.html"><button type="button" class="cursor-pointer w-full rounded-lg bg-[#CD7A27] py-3 text-sm font-semibold text-white hover:bg-[#A05913] transition-all">Buy Now</button></a>
+                                    <a href="/pages/cart/index.html"><button type="button" class="cursor-pointer inline-flex items-center justify-center gap-2 w-full rounded-lg bg-[#1a1a1a] py-3 text-sm font-medium text-gray-200 border border-white/5 hover:bg-[#222]">
+                                        <img src="/assets/ic-cart.svg" alt="" class="size-4 opacity-80" width="16" height="16">
+                                        Add to Cart
+                                    </button></a>
+                                </div>
+                            </div>
+                            </a>
+                        </article>
+                        <a href="/pages/detail-product/index.html">
+                        <article
+                            class="product-card flex flex-col rounded-xl overflow-hidden bg-[#39393A]/30"
+                            data-product-card
+                            data-name="Disney +"
+                            data-price="35000"
+                            data-category="video"
+                            data-duration="360"
+                            data-popularity="72"
+                            data-plans="annual"
+                        >
+                            <div class="aspect-[16/10] bg-[#1f1f1f] overflow-hidden">
+                                <img src="/assets/product-disney.png" alt="" class="h-full w-full object-cover">
+                            </div>
+                            <div class="p-4 flex flex-col flex-1 gap-3">
+                                <div class="flex flex-col flex-1">
+                                    <div class="flex items-center justify-between gap-2">
+                                    <h2 class="font-semibold text-white text-[20px]">Disney +</h2>
+                                    <span class="text-[#E38D39] font-semibold whitespace-nowrap">Rp299.99k</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex gap-2 items-center justify-start">
+                                    <img src="/assets/ic-time.svg" class="w-[14px] h-[16px]" alt="">
+                                    <p class="text-xs text-[#FDE1C5]">1 Year Access</p>
+                                </div>
+                                <p><span class="text-xs text-[#FDE1C5] uppercase tracking-wide">Per years</span></p>
+                                </div>
+                                </div>
+                                <div class="mt-4 flex flex-col gap-2 mt-auto">
+                                    <a href="/pages/payment/index.html"><button type="button" class="cursor-pointer w-full rounded-lg bg-[#CD7A27] py-3 text-sm font-semibold text-white hover:bg-[#A05913] transition-all">Buy Now</button></a>
+                                    <a href="/pages/cart/index.html"><button type="button" class="cursor-pointer inline-flex items-center justify-center gap-2 w-full rounded-lg bg-[#1a1a1a] py-3 text-sm font-medium text-gray-200 border border-white/5 hover:bg-[#222]">
+                                        <img src="/assets/ic-cart.svg" alt="" class="size-4 opacity-80" width="16" height="16">
+                                        Add to Cart
+                                    </button></a>
+                                </div>
+                            </div>
+                        </article>
+                        </a>
+                        <a href="/pages/detail-product/index.html">
+                        <article
+                            class="product-card flex flex-col rounded-xl overflow-hidden bg-[#39393A]/30"
+                            data-product-card
+                            data-name="Spotify"
+                            data-price="28000"
+                            data-category="music"
+                            data-duration="30"
+                            data-popularity="90"
+                            data-plans="monthly annual"
+                        >
+                            <div class="aspect-[16/10] bg-[#1f1f1f] overflow-hidden">
+                                <img src="/assets/product-spotify.png" alt="" class="h-full w-full object-cover">
+                            </div>
+                            <div class="p-4 flex flex-col flex-1 gap-3">
+                                <div class="flex flex-col flex-1">
+                                    <div class="flex items-center justify-between gap-2">
+                                    <h2 class="font-semibold text-white text-[20px]">Spotify Family</h2>
+                                    <span class="text-[#E38D39] font-semibold whitespace-nowrap">Rp49.99k</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex gap-2 items-center justify-start">
+                                    <img src="/assets/ic-time.svg" class="w-[14px] h-[16px]" alt="">
+                                    <p class="text-xs text-[#FDE1C5]">30 Days Access</p>
+                                </div>
+                                <p><span class="text-xs text-[#FDE1C5] uppercase tracking-wide">Per month</span></p>
+                                </div>
+                                </div>
+                                <div class="mt-4 flex flex-col gap-2 mt-auto">
+                                    <a href="/pages/payment/index.html"><button type="button" class="cursor-pointer w-full rounded-lg bg-[#CD7A27] py-3 text-sm font-semibold text-white hover:bg-[#A05913] transition-all">Buy Now</button></a>
+                                    <a href="/pages/cart/index.html"><button type="button" class="cursor-pointer inline-flex items-center justify-center gap-2 w-full rounded-lg bg-[#1a1a1a] py-3 text-sm font-medium text-gray-200 border border-white/5 hover:bg-[#222]">
+                                        <img src="/assets/ic-cart.svg" alt="" class="size-4 opacity-80" width="16" height="16">
+                                        Add to Cart
+                                    </button></a>
+                                </div>
+                            </div>
+                        </article>
+                        </a>
+                        <a href="/pages/detail-product/index.html">
+                        <article
+                            class="product-card flex flex-col rounded-xl overflow-hidden bg-[#39393A]/30"
+                            data-product-card
+                            data-name="Chat GPT +"
+                            data-price="38000"
+                            data-category="creative"
+                            data-duration="30"
+                            data-popularity="85"
+                            data-plans="monthly quarterly annual"
+                        >
+                            <div class="aspect-[16/10] bg-[#1f1f1f] overflow-hidden">
+                                <img src="/assets/product-gpt.png" alt="" class="h-full w-full object-cover">
+                            </div>
+                            <div class="p-4 flex flex-col flex-1 gap-3">
+                                <div class="flex flex-col flex-1">
+                                    <div class="flex items-center justify-between gap-2">
+                                    <h2 class="font-semibold text-white text-[20px]">Chat GPT +</h2>
+                                    <span class="text-[#E38D39] font-semibold whitespace-nowrap">Rp9.99k</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex gap-2 items-center justify-start">
+                                    <img src="/assets/ic-time.svg" class="w-[14px] h-[16px]" alt="">
+                                    <p class="text-xs text-[#FDE1C5]">30 Days Access</p>
+                                </div>
+                                <p><span class="text-xs text-[#FDE1C5] uppercase tracking-wide">Per month</span></p>
+                                </div>
+                                </div>
+                                <div class="mt-4 flex flex-col gap-2 mt-auto">
+                                    <a href="/pages/payment/index.html"><button type="button" class="cursor-pointer w-full rounded-lg bg-[#CD7A27] py-3 text-sm font-semibold text-white hover:bg-[#A05913] transition-all">Buy Now</button></a>
+                                    <a href="/pages/cart/index.html"><button type="button" class="cursor-pointer inline-flex items-center justify-center gap-2 w-full rounded-lg bg-[#1a1a1a] py-3 text-sm font-medium text-gray-200 border border-white/5 hover:bg-[#222]">
+                                        <img src="/assets/ic-cart.svg" alt="" class="size-4 opacity-80" width="16" height="16">
+                                        Add to Cart
+                                    </button></a>
+                                </div>
+                            </div>
+                        </article>
+                        </a>
+                    </div>
+
+                    <div class="flex justify-center pt-2">
+                        <button type="button" class="cursor-pointerrounded-xl border border-white/20 bg-transparent px-8 py-3 text-sm font-medium text-white hover:bg-white/5 transition-colors">Load More Services</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <footer class="container mx-auto py-[50px] border-t-2 border-white/10">
+        <div class="max-w-7xl mx-auto py-[20px] md:px-0 px-4">
+            <div class="grid grid-cols-1 md:flex md:flex-col gap-4">
+              <div  class="grid grid-cols-1 md:flex items-center justify-between text-white text-[24px] font-semibold">
+              <h2>NEXTERA</h2>
+              <div class="grid grid-cols-1 md:flex items-center justify-between md:gap-4 gap-2">
+                <a href="/pages/home/index.html" class="text-white text-[16px] font-normal">Home</a>
+                <a href="/pages/product/index.html" class="text-white text-[16px] font-normal">Product</a>
+                <a href="/pages/about/index.html" class="text-white text-[16px] font-normal">About Us</a>
+                <a href="/pages/contact/index.html" class="text-white text-[16px] font-normal">Contact</a>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:flex items-center justify-between">
+              <p class="text-white text-[14px]">©  2025 NextEra. All rights reserved.</p>
+              <div class="flex items-center gap-2 text-white text-[14px]">
+                <p>Terms & Conditions</p>
+                <span>|</span>
+                <p>Privacy Policy</p>
+              </div>
+            </div>
+            </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+        (function () {
+            var btn = document.getElementById('filter-toggle');
+            var panel = document.getElementById('filter-panel');
+            if (btn && panel) {
+                btn.addEventListener('click', function () {
+                    panel.classList.toggle('hidden');
+                    var hidden = panel.classList.contains('hidden');
+                    btn.setAttribute('aria-expanded', hidden ? 'false' : 'true');
+                });
+            }
+
+            function getCards() {
+                return Array.prototype.slice.call(document.querySelectorAll('[data-product-card]'));
+            }
+
+            function selectedPlan() {
+                var active = document.querySelector('.plan-pill[aria-pressed="true"]');
+                return active ? active.getAttribute('data-plan') : 'monthly';
+            }
+
+            function planMatches(el, plan) {
+                var raw = el.getAttribute('data-plans') || '';
+                var plans = raw.split(/\s+/).filter(Boolean);
+                if (!plans.length) return true;
+                return plans.indexOf(plan) !== -1;
+            }
+
+            function applyProducts() {
+                var searchEl = document.getElementById('product-search');
+                var grid = document.getElementById('product-grid');
+                var emptyEl = document.getElementById('product-empty');
+                if (!grid) return;
+
+                var q = (searchEl && searchEl.value) ? searchEl.value.trim().toLowerCase() : '';
+                var sortEl = document.querySelector('input[name="sort"]:checked');
+                var catEl = document.querySelector('input[name="category"]:checked');
+                var sort = sortEl ? sortEl.value : 'popularity';
+                var cat = catEl ? catEl.value : 'all';
+                var plan = selectedPlan();
+
+                var cards = getCards().filter(function (el) {
+                    var name = (el.getAttribute('data-name') || '').toLowerCase();
+                    if (q && name.indexOf(q) === -1) return false;
+                    if (cat !== 'all' && el.getAttribute('data-category') !== cat) return false;
+                    if (!planMatches(el, plan)) return false;
+                    return true;
+                });
+
+                cards.sort(function (a, b) {
+                    if (sort === 'price') {
+                        return Number(a.getAttribute('data-price')) - Number(b.getAttribute('data-price'));
+                    }
+                    if (sort === 'duration') {
+                        return Number(a.getAttribute('data-duration')) - Number(b.getAttribute('data-duration'));
+                    }
+                    return Number(b.getAttribute('data-popularity')) - Number(a.getAttribute('data-popularity'));
+                });
+
+                getCards().forEach(function (el) {
+                    el.classList.add('hidden');
+                });
+                cards.forEach(function (el) {
+                    el.classList.remove('hidden');
+                    grid.appendChild(el);
+                });
+
+                if (emptyEl) {
+                    emptyEl.classList.toggle('hidden', cards.length !== 0);
+                }
+            }
+
+            document.querySelectorAll('input[name="sort"], input[name="category"]').forEach(function (el) {
+                el.addEventListener('change', applyProducts);
+            });  
+            var searchInput = document.getElementById('product-search');
+            if (searchInput) {
+                searchInput.addEventListener('input', applyProducts);
+            }
+
+            document.querySelectorAll('.plan-pill').forEach(function (pill) {
+                pill.addEventListener('click', function () {
+                    document.querySelectorAll('.plan-pill').forEach(function (p) {
+                        p.classList.remove('bg-[#E38D39]', 'text-white');
+                        p.classList.add('bg-[#2A2A2A]', 'text-gray-300');
+                        p.setAttribute('aria-pressed', 'false');
+                    });
+                    pill.classList.remove('bg-[#2A2A2A]', 'text-gray-300');
+                    pill.classList.add('bg-[#E38D39]', 'text-white');
+                    pill.setAttribute('aria-pressed', 'true');
+                    applyProducts();
+                });
+            });
+
+            applyProducts();
+        })();
+    </script>
+</body>
+</html>

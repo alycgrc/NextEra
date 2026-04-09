@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <main>
+        <nav class="fixed z-100 bg-[#1C1B1C]/90 bg-blur-xl w-full">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+              <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                  <button type="button" id="menu-btn" class="cursor-pointer relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+                      <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+                      <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                  <div class="flex shrink-0 items-center">
+                    <a href="/pages/home/index.html">
+                      <h2 class="text-[24px] text-white font-semibold">NextEra</h2>
+                    </a>
+                  </div>
+                  <div class="hidden sm:ml-6 sm:block w-full">
+                    <div class="flex space-x-4 mx-auto items-center justify-center"> 
+                      <a href="/pages/product/index.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27]">Product</a>
+                      <a href="/pages/about/index.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27]">About Us</a>
+                      <a href="/pages/contact/index.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27]">Contact</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                  <a href="/pages/cart/index.html">
+                    <button type="button" class="relative cursor-pointer rounded-full p-1 text-gray-400 focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
+                    <span class="absolute -inset-1.5"></span>
+                    <span class="sr-only">View carts</span>
+                    <img src="/assets/ic-cartnav.svg" class="size-4" alt="Cart">
+                  </button>
+                  </a>
+                  <el-dropdown class="relative ml-3 ">
+                    <button class="relative flex cursor-pointer rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                      <span class="absolute -inset-1.5"></span>
+                      <span class="sr-only">Open user menu</span>
+                      <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-6 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10" />
+                    </button>
+                  </el-dropdown>
+                </div>
+              </div>
+            </div>
+          
+            <div id="mobile-menu" class="hidden sm:hidden">
+              <div class="space-y-1 px-2 pt-2 pb-3">
+                <a href="/pages/product/index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27] font-medium ">Product</a>
+                <a href="/pages/about/index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27] font-medium text-gray-300 hover:bg-white/5 ">About Us</a>
+                <a href="/pages/contact/index.html" class="block rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-[#CD7A27] font-medium text-gray-300 hover:bg-white/5 ">Contact</a>
+              </div>
+            </div>
+          </nav>
+        <section class="container mx-auto py-[50px] md:px-0 px-4">
+            <div class="max-w-7xl mx-auto py-[50px]">
+                <div class="grid items-center justify-center gap-3 text-center">
+                  <h2 class="text-white md:text-[72px] text-[52px] font-semibold">Connect with The NextEra</h2>
+                  <p class="text-[18px] text-gray-500 max-w-2xl mx-auto">
+                    Reach out to our team for inquiries, support, or partnership opportunities.
+We're here to help elevate your cinematic experience.
+                  </p>
+                </div>
+                <div class="grid md:flex justify-between py-12 gap-8">
+                <form action="/pages/contact/index.html" method="POST" class="bg-[#1C1B1C] px-8 py-4 rounded-md md:w-[800px]">
+                    <div class="py-4">
+                        <h4 class="md:text-[38px] text-[32px] text-white font-semibold">Send Message</h4>
+                    </div>
+                    <div class="mb-5 w-full">
+                        <label for="name" class="block text-gray-500 text-[14px] font-medium mb-2">FULL NAME</label>
+                        <input type="text" id="name" placeholder="Enter your name" name="name" class="w-full bg-[#0E0E0F] text-gray-500 placeholder:text-gray-500  focus:ring-1 focus:ring-gray-500 focus:outline-none py-2 px-4 rounded-md">
+                    </div>
+                    <div class="mb-5 w-full">
+                        <label for="email" class="block text-gray-500 text-[14px] font-medium mb-2">EMAIL ADDRESS</label>
+                        <input type="email" id="email" placeholder="example@gmail.com" name="email" class="w-full bg-[#0E0E0F] text-gray-500 placeholder:text-gray-500  focus:ring-1 focus:ring-gray-500 focus:outline-none py-2 px-4 rounded-md">
+                    </div>
+                    <div class="mb-5 w-full">
+                        <label for="message" class="block text-gray-500 text-[14px] font-medium mb-2">MESSAGE</label>
+                        <textarea id="message" placeholder="How can we help you today?" name="message" rows="7" class="w-full h-full bg-[#0E0E0F] text-gray-500 placeholder:text-gray-500  focus:ring-1 focus:ring-gray-500 focus:outline-none py-2 px-4 rounded-md"></textarea>
+                    </div>
+                    <button type="submit" class="cursor-pointer bg-[#CD7A27] hover:bg-[#A05913] w-full text-white px-[24px] py-[10px] rounded-full text-[16px]">
+                        Send Message
+                    </button>
+                </form>
+                <div class="md:h-[600px] md:w-[1000px] w-[370px] h-[400px] relative">
+                    <img src="/assets/contact.png" class="h-full w-full object-cover" alt="Contact Image">
+                    <div class="absolute z-2 bottom-12 left-8">
+                        <div class="text-white text-[12px] font-semibold px-4 py-2 bg-[#CD7A27] rounded-full w-fit">
+                        <p>PREMIUM SUPPORT</p>
+                    </div>
+                    <h3 class="text-white font-semibold md:text-[38px] text-[24px]">The future of cinema,
+built for you.</h3>
+                    <p class="text-gray-500 text-[14px]">Experience world-class support tailored to the
+needs of modern collectors and cinephiles.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+        </section>
+        <footer class="container mx-auto py-[50px] border-t-2 border-white/10">
+        <div class="max-w-7xl mx-auto py-[20px] md:px-0 px-4">
+            <div class="grid grid-cols-1 md:flex md:flex-col gap-4">
+              <div  class="grid grid-cols-1 md:flex items-center justify-between text-white text-[24px] font-semibold">
+              <h2>NEXTERA</h2>
+              <div class="grid grid-cols-1 md:flex items-center justify-between md:gap-4 gap-2">
+                <a href="/pages/home/index.html" class="text-white text-[16px] font-normal">Home</a>
+                <a href="/pages/product/index.html" class="text-white text-[16px] font-normal">Product</a>
+                <a href="/pages/about/index.html" class="text-white text-[16px] font-normal">About Us</a>
+                <a href="/pages/contact/index.html" class="text-white text-[16px] font-normal">Contact</a>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:flex items-center justify-between">
+              <p class="text-white text-[14px]">©  2025 NextEra. All rights reserved.</p>
+              <div class="flex items-center gap-2 text-white text-[14px]">
+                <p>Terms & Conditions</p>
+                <span>|</span>
+                <p>Privacy Policy</p>
+              </div>
+            </div>
+            </div>
+        </div>
+      </footer>
+    </main>
+</body>
+<script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+</html>
